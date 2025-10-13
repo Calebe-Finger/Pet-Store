@@ -25,13 +25,13 @@
       <h2 class="display-4">Adicione seus amigos!</h2>
       <p class="lead">Busque por outros usuários cadastrados.</p>
       <form action="" enctype="multipart/form-data" class="w-50 mx-auto text-start row">
-        <div class="mb-3 col-10">
-          <label class="form-label">Nome do usuário</label>
+        <label class="form-label">Nome do usuário</label>
+        <div class="col-10 mt-4">
           <input type="text" class="form-control " name="nome" placeholder="Nome">
-        </div>
-        <div class="mb-3 col-2">
-          <button type="submit" class="botao-efeito">Pesquisar</button>
         <div>
+          <div class="">
+            <button type="submit" class="botao-adicionar">Pesquisar</button>
+          </div>
         <div class="row">
           <?php
             require_once "src/UsuarioDAO.php";
@@ -50,10 +50,9 @@
             foreach ($usuarios as $usuario)
             {
           ?>
-            <p class="my-2"><?=$usuario['nome']?>
-            <div class="col-4">
-              <a href="seguir.php?idSeguido=<?=$usuario['idUsuario']?>" class="botao-adicionar">Adicionar</a></p>      
-            </div>
+              <p class="my-2"><?=$usuario['nome']?></p>
+               <a href="seguir.php?idSeguido=<?=$usuario['idUsuario']?>" class="botao-adicionar">Adicionar</a>
+                
           <?php
             }            
           ?>

@@ -20,23 +20,28 @@
     <h1 class="display-4">Seja bem-vindo(a), <?=$_SESSION["nome"]?>!</h1>
 
 
-<div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false">
+<div id="carouselExampleIndicators" class="carousel-slide">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="img/cachorro.jpg" class="d-block w-100" alt="...">
+      <img src="img\gato.jpg" class="d-block w-100" alt="Gato ruivo levantando as patas alegremente">
+    </div>  
+    <div class="carousel-item">
+      <img src="img\cachorro.jpg" class="d-block w-100" alt="Uma homenagem a Pandora, cahorra do Bernardo">
     </div>
     <div class="carousel-item">
-      <img src="img/gato.jpg" class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="img/fundo.jpg" class="d-block w-100" alt="...">
+      <img src="..." class="d-block w-100" alt="...">
     </div>
   </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev">
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Previous</span>
   </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next">
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Next</span>
   </button>
@@ -45,11 +50,11 @@
     
 
     
-      <form action="perfil.php" method="post" enctype="multipart/form-data" class="w-50 mx-auto text-start row">
-        <button type="submit" class="btn btn-primary btn-lg my-4">Visualizar Perfil</button>
+    <form action="perfil.php" method="post" enctype="multipart/form-data" class="w-50 mx-auto text-start row">
+        <button class="botao-vizu" type="button">Button</button>
     </form>
     <form action="usuarios.php"  enctype="multipart/form-data" class="w-50 mx-auto text-start row">
-        <button type="submit" class="btn btn-primary btn-lg my-4">Visualizar Usuários</button>
+          <button class="botao-vizu" type="button">Button</button>
     </form>
 
     <?php
