@@ -1,0 +1,92 @@
+
+
+.rodape {
+    position: fixed;
+}
+
+.nav-item {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 20px;
+  color: rgb(245, 200, 200);
+}
+
+.tamanho {
+  width: 20;
+}
+.navbar-brand{
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 25px;
+  font-weight: bold;
+  color: white;
+
+}
+
+.boton{
+  background-color: rgb(143, 111, 111);
+  color: rgb(255, 251, 251);
+  border-radius: 10px;
+  padding: 10px 10px;
+}
+
+.display-4{
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 60px;
+  color: #A7B075;
+  text-align: center;
+  margin-top: 5px;
+}
+
+.link{
+ color: #A7B075;
+
+}
+
+.botaologin{
+  background-color: #A7B075;
+  color: rgb(255, 251, 251);
+  border-radius: 10px;
+  padding: 8px 8px;
+}
+
+    .logo {
+      position: fixed;  /* Fixa na tela, mesmo com scroll */
+      top: 15;           /* Topo da página */
+      left: 220px;          /* Esquerda da página */
+      width: 60px;     /* Ajuste o tamanho conforme necessário */
+      height: 60px;     /* Mantém a proporção */
+      z-index: 1000;    /* Garante que fique acima de outros elementos */
+
+
+
+      
+    }
+
+    .botao-efeito {
+      background-color: #D3A95B;
+      border: none;
+      color: white;
+      padding: 15px 30px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    .botao-adicionar {
+      background-color: #D3A95B;
+      border: none;
+      color: white;
+      padding: 15px 15px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 12px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      
+    }
