@@ -35,8 +35,8 @@
           <input type="password" class="form-control" name="senha" placeholder="Senha" required>
         </div>
         <div class="mb-3">
-          <label class="form-label">Imagem</label>
-          <input type="file" class="form-control" name="imagem">
+          <label class="form-label">Foto</label>
+          <input type="file" class="form-control" name="foto">
         </div>
 
         <button type="submit" class="boton btn-lg my-4">Cadastrar</button>

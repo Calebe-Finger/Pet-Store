@@ -2,7 +2,7 @@
 
     class Util
     {
-        public static function salvarImagem()
+        public static function salvarFoto()
         {
             // Define o diretório onde os arquivos serão salvos
             $diretorioUpload = "uploads/";
@@ -13,9 +13,9 @@
             }
 
             // Verifica se um arquivo foi enviado
-            if (isset($_FILES['imagem']) && $_FILES['imagem']['error'] === UPLOAD_ERR_OK) {
-                $arquivoTmp = $_FILES['imagem']['tmp_name'];
-                $nomeOriginal = basename($_FILES['imagem']['name']);
+            if (isset($_FILES['foto']) && $_FILES['foto']['error'] === UPLOAD_ERR_OK) {
+                $arquivoTmp = $_FILES['foto']['tmp_name'];
+                $nomeOriginal = basename($_FILES['foto']['name']);
                 $extensao = strtolower(pathinfo($nomeOriginal, PATHINFO_EXTENSION));
 
                 // Gera um nome único para o arquivo

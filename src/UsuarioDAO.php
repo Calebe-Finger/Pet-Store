@@ -7,15 +7,15 @@ class UsuarioDAO{
     public static function cadastrarUsuario($dados){
         $conexao = ConexaoBD::conectar();
         
-        $sql = "insert into usuarios (nome, email, senha, imagem) values (?,?,?,?)";
+        $sql = "insert into usuarios (nome, email, senha, foto) values (?,?,?,?)";
         $stmt = $conexao->prepare($sql);
         
         $stmt->bindParam(1, $dados['nome']);
         $stmt->bindParam(2, $dados['email']);
         $senhaCriptografada = md5($dados['senha']);
         $stmt->bindParam(3, $senhaCriptografada);
-        $imagem = Util::SalvarImagem();
-        $stmt->bindParam(4, $imagem);
+        $foto = Util::SalvarFoto();
+        $stmt->bindParam(4, $foto);
 
         $stmt->execute();
     }

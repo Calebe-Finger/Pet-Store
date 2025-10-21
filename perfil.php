@@ -29,12 +29,12 @@
 
         <p class="fs-3">Nome: <?=$usuario["nome"]?></p>
         <p class="fs-3">Email: <?=$usuario["email"]?></p>
-        <p class="fs-3">Foto: <?=$usuario["imagem"]?></p>
+        <p class="fs-3">Foto: <?=$usuario["foto"]?></p>
 
     <form action="cadastra-usuario.php" method="post" enctype="multipart/form-data" class="w-50 mx-auto text-start row"></form>
         <div class="mb-3">
-            <label class="form-label">Imagem</label>
-            <input type="file" class="form-control" name="imagem">
+            <label class="form-label">Foto</label>
+            <input type="file" class="form-control" name="foto">
         </div>
     </form>
 

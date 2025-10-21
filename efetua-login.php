@@ -6,7 +6,7 @@
         $_SESSION['email'] = $_POST['email'];
         $_SESSION['idUsuario'] = $usuario["idUsuario"];
         $_SESSION['nome'] = $usuario["nome"];
-        $_SESSION['imagem'] = $usuario["imagem"];
+        $_SESSION['foto'] = $usuario["foto"];
 
         header("Location:home.php");
     }else{

@@ -72,7 +72,7 @@
 
      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     
-    <a class="botao-vizu btn mt-4" href="seguir.php">Vizualizar Pefil</a><br>
+    <a class="botao-vizu btn mt-4" href="perfil.php">Vizualizar Pefil</a><br>
 
     <a class="botao-vizu btn mb-4" href="usuarios.php">Vizualizar Usuários</a>
 
