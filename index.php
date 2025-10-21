@@ -23,7 +23,7 @@
       <p class="lead text-white my-5">Nosso objetivo é trazer mais alegria, diversão e segurança para o seu pet, por meio de especialistas 24h </p>
       
         <a href="login.php" class="botaoindex btn btn-lg mx-5 text-white">Entrar</a>
-        <a href="form-cadastra-usuario.html" class="botaoindex btn btn-lg mx-5 text-white">Cadastre-se</a>
+        <a href="form-cadastra-usuario.php" class="botaoindex btn btn-lg mx-5 text-white">Cadastre-se</a>
     </main>
 
       <!-- Foooter -->

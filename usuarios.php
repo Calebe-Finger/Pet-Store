@@ -24,16 +24,17 @@
     <main class="container text-center my-5 text-white">
       <h2 class="display-4">Adicione seus amigos!</h2>
       <p class="lead">Busque por outros usuários cadastrados.</p>
-      <form action="" enctype="multipart/form-data" class="w-50 mx-auto text-start row">
+      <form action="" enctype="multipart/form-data" class="w-50 mx-auto text-start">
         <label class="form-label">Nome do usuário</label>
-        <div class="col-10 mt-4">
-          <input type="text" class="form-control " name="nome" placeholder="Nome">
-        <div>
-          <div class="">
-            <button type="submit" class="botao-adicionar">Pesquisar</button>
-          </div>
         <div class="row">
-          <?php
+          <div class="col-10 mt-2">
+            <input type="text" class="form-control" name="nome" placeholder="Nome">
+          </div> 
+          <div class="col-2 mt-2 mb-4"> 
+            <button type="submit" class="botao-adicionar btn">Pesquisar</button>
+          </div>
+        </div>
+            <?php
             require_once "src/UsuarioDAO.php";
 
             if (!isset($_GET["nome"]))
@@ -49,14 +50,18 @@
 
             foreach ($usuarios as $usuario)
             {
-          ?>
-              <p class="my-2"><?=$usuario['nome']?></p>
-               <a href="seguir.php?idSeguido=<?=$usuario['idUsuario']?>" class="botao-adicionar">Adicionar</a>
-                
+          ?>  
+              <div class="row w-100 container my-3 py-2 border rounded p-1 d-flex align-items-center" style="background-color: rgba(255, 255, 255, 0.12)">
+                <div class="col-10">
+                  <a><?=$usuario['nome']?></a>
+                </div>
+                <div class="col-2">
+                  <a class="botao-adicionar btn" href="seguir.php?idSeguido=<?=$usuario['idUsuario']?>">Adicionar</a><br>
+                </div>
+              </div>  
           <?php
             }            
           ?>
-        </div>
       </form> 
     </main>
 
