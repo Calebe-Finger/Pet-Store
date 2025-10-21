@@ -16,6 +16,32 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
+-- Table structure for table `postagens`
+--
+
+DROP TABLE IF EXISTS `postagens`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `postagens` (
+  `texto` varchar(45) NOT NULL,
+  `foto` varchar(45) NOT NULL,
+  `idUsuario` int(11) NOT NULL,
+  `publico` varchar(45) NOT NULL,
+  `criado_em` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `postagens`
+--
+
+LOCK TABLES `postagens` WRITE;
+/*!40000 ALTER TABLE `postagens` DISABLE KEYS */;
+INSERT INTO `postagens` VALUES ('teste','',27,'público','2025-10-21 13:34:09');
+/*!40000 ALTER TABLE `postagens` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `seguidos`
 --
 
@@ -35,6 +61,7 @@ CREATE TABLE `seguidos` (
 
 LOCK TABLES `seguidos` WRITE;
 /*!40000 ALTER TABLE `seguidos` DISABLE KEYS */;
+INSERT INTO `seguidos` VALUES (2,3),(27,23);
 /*!40000 ALTER TABLE `seguidos` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -52,7 +79,7 @@ CREATE TABLE `usuarios` (
   `senha` varchar(45) DEFAULT NULL,
   `imagem` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`idUsuario`)
-) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -61,7 +88,7 @@ CREATE TABLE `usuarios` (
 
 LOCK TABLES `usuarios` WRITE;
 /*!40000 ALTER TABLE `usuarios` DISABLE KEYS */;
-INSERT INTO `usuarios` VALUES (17,'teste','teste123@email.com','202cb962ac59075b964b07152d234b70','img_68f63ea45c82e6.10982651.jpg'),(18,'joana','joana@email.com','18f01959ff46071d73905d549cafde20','img_68f64169b4a659.92236072.jpg'),(19,NULL,NULL,'d41d8cd98f00b204e9800998ecf8427e',''),(20,'alfredo','alfredo@email.com','5c2bf15004e661d7b7c9394617143d07',''),(21,'wagner','wagner@email.com','23ba6002aa3583a61db26e957b1fbe43',''),(22,NULL,NULL,'d41d8cd98f00b204e9800998ecf8427e','');
+INSERT INTO `usuarios` VALUES (23,'Fabrício','fabricio@email.com','81dc9bdb52d04dc20036dbd8313ed055',''),(24,NULL,NULL,'d41d8cd98f00b204e9800998ecf8427e',''),(25,'teste','teste@email.com','81dc9bdb52d04dc20036dbd8313ed055',''),(26,NULL,NULL,'d41d8cd98f00b204e9800998ecf8427e',''),(27,'joana','joana@banana.com','72b302bf297a228a75730123efef7c41','');
 /*!40000 ALTER TABLE `usuarios` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -74,4 +101,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-10-20 11:38:02
+-- Dump completed on 2025-10-21  8:58:38
