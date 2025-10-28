@@ -23,20 +23,36 @@
       <p class="lead">Cadastre-se em nosso site.</p>
       <form action="cadastra-usuario.php" method="post" enctype="multipart/form-data" class="w-50 mx-auto text-start row">
         <div class="mb-3">
-          <label class="form-label">Nome</label>
-          <input type="text" class="form-control" name="nome" placeholder="Nome" required>
+          <label class="form-label">Nome Postagem</label>
+          <input type="text" class="form-control" name="nome" placeholder="Post Viral" required>
         </div>
-        <div class="mb-3">
-          <label class="form-label">Email</label>
-          <input type="email" class="form-control" name="email" placeholder="Email" required>
-        </div>
-        <div class="mb-3">
-          <label class="form-label">Senha</label>
-          <input type="password" class="form-control" name="senha" placeholder="Senha" required>
+        <div class="form-floating mb-3">
+            
         </div>
         <div class="mb-3">
           <label class="form-label">Foto</label>
           <input type="file" class="form-control" name="foto">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Público Alvo</label>
+          <input type="email" class="form-control" name="email" placeholder="Email" required>
+        </div>
+
+        <div class="m-5 border p-2 rounded border-primary bg-primary bg-opacity-10">
+            <label for="exampleFormControlTextarea1" class="form-label">Categoria</label>
+            <select class = "form-select" name = "idCategoria" required>
+                <option selected>Selecione uma opção</option>
+                <?php
+                    require_once "src/CategoriaDAO.php";
+                    $dados = CategoriaDAO::listarCategorias();
+                    for ($i=0; $i < count($dados); $i++)
+                    {
+                ?>
+                    <option value="<?=$dados[$i]['id_categoria']?>"><?=$dados[$i]['nome']?></option>
+                <?php
+                    }
+                ?>
+            </select>
         </div>
 
         <button type="submit" class="boton btn-lg my-4">Cadastrar</button>

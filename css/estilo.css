@@ -46,13 +46,6 @@
 
 }
 
-.botaologin{
-  background-color: #A7B075;
-  color: rgb(255, 251, 251);
-  border-radius: 10px;
-  padding: 8px 8px;
-}
-
 .logo {
   top: 15;           /* Topo da página */
   left: 220px;          /* Esquerda da página */
@@ -63,6 +56,13 @@
 
 
   
+}
+
+.botaologin{
+  background-color: #A7B075;
+  color: rgb(255, 251, 251);
+  border-radius: 10px;
+  padding: 8px 8px;
 }
 
 .botao-adicionar {
@@ -114,6 +114,20 @@
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
+.botao-cadastrar{
+  background-color: #D3A95B;
+  border: none;
+  color: white;
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
+}
 
 .carousel-inner {
     height: 300px;

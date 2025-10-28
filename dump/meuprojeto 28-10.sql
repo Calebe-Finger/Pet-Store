@@ -23,11 +23,13 @@ DROP TABLE IF EXISTS `postagens`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `postagens` (
-  `texto` varchar(45) NOT NULL,
-  `foto` varchar(45) NOT NULL,
+  `idPostagem` int(11) NOT NULL AUTO_INCREMENT,
   `idUsuario` int(11) NOT NULL,
+  `texto` varchar(45) NOT NULL,
+  `foto` varchar(45) DEFAULT NULL,
   `publico` varchar(45) NOT NULL,
-  `criado_em` datetime NOT NULL
+  `criado_em` datetime DEFAULT NULL,
+  PRIMARY KEY (`idPostagem`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -37,7 +39,6 @@ CREATE TABLE `postagens` (
 
 LOCK TABLES `postagens` WRITE;
 /*!40000 ALTER TABLE `postagens` DISABLE KEYS */;
-INSERT INTO `postagens` VALUES ('teste','',27,'público','2025-10-21 13:34:09');
 /*!40000 ALTER TABLE `postagens` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -61,7 +62,6 @@ CREATE TABLE `seguidos` (
 
 LOCK TABLES `seguidos` WRITE;
 /*!40000 ALTER TABLE `seguidos` DISABLE KEYS */;
-INSERT INTO `seguidos` VALUES (2,3),(27,23);
 /*!40000 ALTER TABLE `seguidos` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -74,12 +74,12 @@ DROP TABLE IF EXISTS `usuarios`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `usuarios` (
   `idUsuario` int(11) NOT NULL AUTO_INCREMENT,
-  `nome` varchar(45) DEFAULT NULL,
-  `email` varchar(45) DEFAULT NULL,
-  `senha` varchar(45) DEFAULT NULL,
-  `imagem` varchar(45) DEFAULT NULL,
+  `nome` varchar(45) NOT NULL,
+  `email` varchar(45) NOT NULL,
+  `senha` varchar(45) NOT NULL,
+  `foto` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`idUsuario`)
-) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -88,7 +88,7 @@ CREATE TABLE `usuarios` (
 
 LOCK TABLES `usuarios` WRITE;
 /*!40000 ALTER TABLE `usuarios` DISABLE KEYS */;
-INSERT INTO `usuarios` VALUES (23,'Fabrício','fabricio@email.com','81dc9bdb52d04dc20036dbd8313ed055',''),(24,NULL,NULL,'d41d8cd98f00b204e9800998ecf8427e',''),(25,'teste','teste@email.com','81dc9bdb52d04dc20036dbd8313ed055',''),(26,NULL,NULL,'d41d8cd98f00b204e9800998ecf8427e',''),(27,'joana','joana@banana.com','72b302bf297a228a75730123efef7c41','');
+INSERT INTO `usuarios` VALUES (1,'teste','teste@email.com','81dc9bdb52d04dc20036dbd8313ed055','');
 /*!40000 ALTER TABLE `usuarios` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -101,4 +101,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-10-21  8:58:38
+-- Dump completed on 2025-10-28  9:05:10

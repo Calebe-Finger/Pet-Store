@@ -24,8 +24,11 @@
     <main class="container text-center my-5 text-white">
       <h2 class="display-4">Veja, faça, experimente, crie!</h2>
       <p class="lead">Visualize postagens de pessoas do mundo todo, ou crie suas próprias e compartilhe com seus melhores amigos.</p>
-      <form action="" enctype="multipart/form-data" class="w-50 mx-auto text-start">
-        <label class="form-label">Pesquise o nome do perfil que fez a postagem</label>
+      <div class="w-50 mx-auto text-start">
+        <div class="row">
+          <a href="form-cadastra-postagem.php" class="botao-cadastrar btn my-4">+ Cadastrar Nova Postagem</a>
+        </div>
+        <label class="form-label mt-2">Pesquise o nome do perfil que fez a postagem</label>
         <div class="row">
           <div class="col-10 mt-2">
             <input type="text" class="form-control" name="nome" placeholder="Nome do Perfil">
@@ -34,35 +37,36 @@
             <button type="submit" class="botao-adicionar btn">Pesquisar</button>
           </div>
         </div>
+        
             <?php
             require_once "src/PostagemDAO.php";
 
             if (!isset($_GET["texto"]))
             {
               $_GET["texto"] = "";
-              $usuarios = [];
+              $postagens = [];
             }
             else
             {
-              $usuarios = UsuarioDAO::buscarUsuarioNome($_GET["nome"], $_SESSION["idUsuario"]);
+              $postagens = PostagemDAO::listarTimeline($_SESSION["idUsuario"]);
             }
 
 
-            foreach ($usuarios as $usuario)
+            foreach ($postagens as $postagem)
             {
           ?>  
               <div class="row w-100 container my-3 py-2 border rounded p-1 d-flex align-items-center" style="background-color: rgba(255, 255, 255, 0.12)">
                 <div class="col-10">
-                  <a><?=$usuario['nome']?></a>
+                  <a><?=$postagem['nome']?></a>
                 </div>
-                <div class="col-2">
+                <!-- <div class="col-2">
                   <a class="botao-adicionar btn" href="seguir.php?idSeguido=<?=$usuario['idUsuario']?>">Adicionar</a><br>
-                </div>
+                </div> -->
               </div>  
           <?php
             }            
           ?>
-      </form> 
+      </div> 
     </main>
 
     <!-- Footer -->
