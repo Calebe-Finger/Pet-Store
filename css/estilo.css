@@ -52,10 +52,6 @@
   width: 60px;     /* Ajuste o tamanho conforme necessário */
   height: 60px;     /* Mantém a proporção */
   z-index: 1000;    /* Garante que fique acima de outros elementos */
-
-
-
-  
 }
 
 .botaologin{
@@ -123,6 +119,22 @@
   text-decoration: none;
   display: inline-block;
   font-size: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
+}
+
+.botao-curtir{
+  background-color: #D3A95B;
+  border: none;
+  color: white;
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  width: 80px;
   border-radius: 10px;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.3s ease;

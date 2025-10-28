@@ -26,7 +26,7 @@
       <p class="lead">Visualize postagens de pessoas do mundo todo, ou crie suas próprias e compartilhe com seus melhores amigos.</p>
       <div class="w-50 mx-auto text-start">
         <div class="row">
-          <a href="form-cadastra-postagem.php" class="botao-cadastrar btn my-4">+ Cadastrar Nova Postagem</a>
+          <a href="nova-postagem.php" class="botao-cadastrar btn my-4">+ Cadastrar Nova Postagem</a>
         </div>
         <label class="form-label mt-2">Pesquise o nome do perfil que fez a postagem</label>
         <div class="row">
@@ -41,27 +41,20 @@
             <?php
             require_once "src/PostagemDAO.php";
 
-            if (!isset($_GET["texto"]))
-            {
-              $_GET["texto"] = "";
-              $postagens = [];
-            }
-            else
-            {
-              $postagens = PostagemDAO::listarTimeline($_SESSION["idUsuario"]);
-            }
-
+            $postagens = PostagemDAO::listarTimeline($_SESSION["idUsuario"]);
 
             foreach ($postagens as $postagem)
             {
           ?>  
               <div class="row w-100 container my-3 py-2 border rounded p-1 d-flex align-items-center" style="background-color: rgba(255, 255, 255, 0.12)">
-                <div class="col-10">
+                <div class="col-9">
                   <a><?=$postagem['nome']?></a>
+                  <a><?=$postagem['texto']?></a>
+                  <a><?=$postagem['foto']?></a>
                 </div>
-                <!-- <div class="col-2">
-                  <a class="botao-adicionar btn" href="seguir.php?idSeguido=<?=$usuario['idUsuario']?>">Adicionar</a><br>
-                </div> -->
+                <div class="col-3">
+                  <a class="botao-curtir btn">Curtir</a><br>
+                </div>
               </div>  
           <?php
             }            
