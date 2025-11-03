@@ -15,14 +15,14 @@
         include 'reutilizado\navbar.php'
       ?>
   </head>
-  <body  class="d-flex flex-column min-vh-100" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('img/fundo.jpg');
+  <body  class="d-flex flex-column min-vh-100" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('img/Fundo Usuarios.jpg');
           background-size: cover;
           background-position: center;
           background-repeat: no-repeat;">
 
     <!-- Conteúdo Principal -->
     <main class="container text-center my-5 text-white">
-      <h2 class="display-4">Adicione seus amigos!</h2>
+      <h2 class="display-5">Adicione seus amigos!</h2>
       <p class="lead">Busque por outros usuários cadastrados.</p>
       <form action="" enctype="multipart/form-data" class="w-50 mx-auto text-start">
         <label class="form-label">Nome do usuário</label>
@@ -56,7 +56,7 @@
                   <a><?=$usuario['nome']?></a>
                 </div>
                 <div class="col-2">
-                  <a class="botao-adicionar btn" href="seguir.php?idSeguido=<?=$usuario['idUsuario']?>">Adicionar</a><br>
+                  <a class="botao-adicionar btn" href="seguir.php?idSeguido=<?=$usuario['idUsuario']?>">Seguir</a><br>
                 </div>
               </div>  
           <?php

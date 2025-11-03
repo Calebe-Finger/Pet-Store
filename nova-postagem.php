@@ -29,8 +29,8 @@
                     <div class="mb-3">
                         <label class="form-label">Visibilidade</label>
                         <select name="publico" class="form-select">
-                            <option value="público">Público</option>
-                            <option value="privado">Privado</option>
+                            <option value="Público">Público</option>
+                            <option value="Privado">Privado</option>
                         </select>
                     </div>
 

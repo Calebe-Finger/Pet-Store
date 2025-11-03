@@ -12,7 +12,7 @@
         include 'reutilizado\navbar.php'
       ?>
   </head>
-  <body class="d-flex flex-column min-vh-100" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('img/fundo.jpg');
+  <body class="d-flex flex-column min-vh-100" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('img/Fundo Index.jpg');
               background-size: cover;
               background-position: center;
               background-repeat: no-repeat;">

@@ -4,5 +4,5 @@
 
     PostagemDAO::cadastrar($_POST, $_SESSION["idUsuario"]);
 
-    header("Location: home.php");
+    header("Location: postagens.php");
 ?>

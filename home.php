@@ -22,16 +22,22 @@
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item"><a class="nav-link active text-white mx-1" href="home.php"><i class="bi bi-house fs-3"></i></a></li>
                 <li class="nav-item"><a class="nav-link text-white mx-1" href="usuarios.php"><i class="bi bi-person-plus fs-3"></i></a></li>
+                <li class="nav-item"><a class="nav-link text-white mx-1" href="postagens.php"><i class="bi bi-plus-square"></i></i></a></li>
                 <li class="nav-item"><a class="nav-link text-white mx-1" href="logout.php"><i class="bi bi-box-arrow-right fs-3"></i></a></li>
                 <li class="nav-item"><a class="nav-link text-white mx-1" href="perfil.php"><i class="bi bi-person-circle fs-3"></i></a></li>
+
             </ul>
         </div>
     </div>
 </nav>
   </head>
-  <body class="fundo-home">
+  <body class="fundo-home d-flex flex-column min-vh-100" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('img/Fundo Home.jpg');
+              background-size: cover;
+              background-position: center;
+              background-repeat: no-repeat;">>
+    <div></div>
 
-    <h1 class="display-4">Seja bem-vindo(a), <?=$_SESSION["nome"]?>!</h1>
+    <h1 class="display-5">Seja bem-vindo(a), <?=$_SESSION["nome"]?>!</h1>
 
 
     <div id="carouselExampleCaptions" class="carousel slide">

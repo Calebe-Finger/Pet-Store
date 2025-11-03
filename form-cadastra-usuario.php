@@ -12,14 +12,14 @@
         include 'reutilizado\navbar.php'
       ?>
   </head>
-  <body  class="d-flex flex-column min-vh-100" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('img/fundo.jpg');
+  <body  class="d-flex flex-column min-vh-100" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('img/Fundo Cadastro.jpg');
               background-size: cover;
               background-position: center;
               background-repeat: no-repeat;">
 
     <!-- Conteúdo Principal -->
     <main class="container text-center text-white ">
-      <h2 class="display-4">Bem-vindo!</h2>
+      <h2 class="display-5">Bem-vindo!</h2>
       <p class="lead">Cadastre-se em nosso site.</p>
       <form action="cadastra-usuario.php" method="post" enctype="multipart/form-data" class="w-50 mx-auto text-start row">
         <div class="mb-3">

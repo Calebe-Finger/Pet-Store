@@ -40,25 +40,25 @@
             return $stmt->fetchAll(PDO::FETCH_ASSOC);
         }
 
-        // Buscar postagens de um usuário
-        // public static function listarPorUsuario($idUsuario) {
-        //     $conexao = ConexaoBD::conectar();
-        //     $sql = "SELECT * FROM postagens WHERE idUsuario = :idUsuario ORDER BY criado_em DESC";
-        //     $stmt = $conexao->prepare($sql);
-        //     $stmt->execute([':idUsuario' => $idUsuario]);
-        //     return $stmt->fetchAll(PDO::FETCH_ASSOC);
-        // }
+        //Buscar postagens de um usuário
+        public static function listarPorUsuario($idUsuario) {
+            $conexao = ConexaoBD::conectar();
+            $sql = "SELECT * FROM postagens WHERE idUsuario = :idUsuario ORDER BY criado_em DESC";
+            $stmt = $conexao->prepare($sql);
+            $stmt->execute([':idUsuario' => $idUsuario]);
+            return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        }
 
-        // // Buscar todas postagens públicas
-        // public static function listarPublicas() {
-        //     $conexao = ConexaoBD::conectar();
-        //     $sql = "SELECT p.*, u.nome, u.foto as foto_usuario 
-        //             FROM postagens p 
-        //             JOIN usuarios u ON p.idUsuario = u.idUsuario
-        //             WHERE p.publico = 1 
-        //             ORDER BY p.criado_em DESC";
-        //     $stmt = $conexao->query($sql);
-        //     return $stmt->fetchAll(PDO::FETCH_ASSOC);
-        // }
+        // Buscar todas postagens públicas
+        public static function listarPublicas() {
+            $conexao = ConexaoBD::conectar();
+            $sql = "SELECT p.*, u.nome, u.foto as foto_usuario 
+                    FROM postagens p 
+                    JOIN usuarios u ON p.idUsuario = u.idUsuario
+                    WHERE p.publico = 1 
+                    ORDER BY p.criado_em DESC";
+            $stmt = $conexao->query($sql);
+            return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        }
     }
 ?>

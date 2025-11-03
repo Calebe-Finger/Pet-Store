@@ -15,25 +15,23 @@
         include 'reutilizado\navbar.php'
       ?>
   </head>
-  <body  class="d-flex flex-column min-vh-100" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('img/fundo.jpg');
+  <body  class="d-flex flex-column min-vh-100" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('img/Fundo Postagens.jpg');
           background-size: cover;
           background-position: center;
           background-repeat: no-repeat;">
 
     <!-- Conteúdo Principal -->
     <main class="container text-center my-5 text-white">
-      <h2 class="display-4">Veja, faça, experimente, crie!</h2>
+      <h2 class="display-5">Veja, faça, experimente, crie!</h2>
       <p class="lead">Visualize postagens de pessoas do mundo todo, ou crie suas próprias e compartilhe com seus melhores amigos.</p>
-      <div class="w-50 mx-auto text-start">
-        <div class="row">
-          <a href="nova-postagem.php" class="botao-cadastrar btn my-4">+ Cadastrar Nova Postagem</a>
-        </div>
+      <a href="nova-postagem.php" class="botao-cadastrar btn my-4 w-50">+ Nova Postagem</a>
+      <div class="w-100 mx-auto text-start">
         <label class="form-label mt-2">Pesquise o nome do perfil que fez a postagem</label>
         <div class="row">
-          <div class="col-10 mt-2">
+          <div class="col-6 mt-2 align-center">
             <input type="text" class="form-control" name="nome" placeholder="Nome do Perfil">
           </div> 
-          <div class="col-2 mt-2 mb-4"> 
+          <div class="col-3 mt-2 mb-3 align-center0"> 
             <button type="submit" class="botao-adicionar btn">Pesquisar</button>
           </div>
         </div>
@@ -46,13 +44,19 @@
             foreach ($postagens as $postagem)
             {
           ?>  
-              <div class="row w-100 container my-3 py-2 border rounded p-1 d-flex align-items-center" style="background-color: rgba(255, 255, 255, 0.12)">
-                <div class="col-9">
-                  <a><?=$postagem['nome']?></a>
-                  <a><?=$postagem['texto']?></a>
-                  <a><?=$postagem['foto']?></a>
+              <div class="row w-100 container my-3 py-2 border rounded p-1 d-flex" style="background-color: rgba(138, 138, 138, 0.9)">
+                <div class="row mb-3">
+                  <img class="foto-perfil col-2" src="uploads/<?=$postagem['foto']?>"></img>
+                  <h1 class="col-10"><?=$postagem['nome']?></h1>
+                  <a class="publico"><?=$postagem['publico']?></a>
                 </div>
-                <div class="col-3">
+                <div class="col-6">
+                  <a><?=$postagem['texto']?></a>
+                </div>
+                <div class="col-6">
+                  <img class="imagem-postagem" src="uploads/<?=$postagem['foto']?>"></img><br>
+                </div>
+                <div class="col-2">
                   <a class="botao-curtir btn">Curtir</a><br>
                 </div>
               </div>  
