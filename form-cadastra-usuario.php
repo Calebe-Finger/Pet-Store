@@ -21,7 +21,7 @@
     <main class="container text-center text-white ">
       <h2 class="display-5">Bem-vindo!</h2>
       <p class="lead">Cadastre-se em nosso site.</p>
-      <form action="cadastra-usuario.php" method="post" enctype="multipart/form-data" class="w-50 mx-auto text-start row">
+      <form action="cadastra-usuario.php" method="post" enctype="multipart/form-data" class="w-50 mx-auto text-start row container mt-3 border rounded p-3 " style="background-color: rgba(255, 255, 255, 0.12)">
         <div class="mb-3">
           <label class="form-label">Nome</label>
           <input type="text" class="form-control" name="nome" placeholder="Nome" required>

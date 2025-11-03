@@ -25,7 +25,6 @@
         <a href="login.php" class="botaoindex btn btn-lg mx-5 text-white">Entrar</a>
         <a href="form-cadastra-usuario.php" class="botaoindex btn btn-lg mx-5 text-white">Cadastre-se</a>
     </main>
-
       <!-- Foooter -->
     <?php
       include 'reutilizado\footer.php';

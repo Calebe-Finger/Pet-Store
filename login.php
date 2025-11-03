@@ -16,12 +16,12 @@
       ?>
   </head>
 
-  <body class="d-flex flex-column min-vh-100" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('img/fundo.jpg');
+  <body class="d-flex flex-column min-vh-100" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('img/Fundo Login.jpg');
               background-size: cover;
               background-position: center;
               background-repeat: no-repeat;">
   
-    <h1 class="display-4">Login</h1>   
+    <h1 class="display-5">Login</h1>   
       <form action="efetua-login.php" method="post" class="w-50 container mt-3 border rounded p-3 " style="background-color: rgba(255, 255, 255, 0.12)">
         
         <?php

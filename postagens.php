@@ -26,12 +26,12 @@
       <p class="lead">Visualize postagens de pessoas do mundo todo, ou crie suas próprias e compartilhe com seus melhores amigos.</p>
       <a href="nova-postagem.php" class="botao-cadastrar btn my-4 w-50">+ Nova Postagem</a>
       <div class="w-100 mx-auto text-start">
-        <label class="form-label mt-2">Pesquise o nome do perfil que fez a postagem</label>
-        <div class="row">
-          <div class="col-6 mt-2 align-center">
+        <div class="row d-flex justify-content-center">
+          <label class="form-label mt-2">Pesquise o nome do perfil que fez a postagem</label>
+          <div class="col-8 mt-2"a>
             <input type="text" class="form-control" name="nome" placeholder="Nome do Perfil">
           </div> 
-          <div class="col-3 mt-2 mb-3 align-center0"> 
+          <div class="col-2 mt-2 mb-3"> 
             <button type="submit" class="botao-adicionar btn">Pesquisar</button>
           </div>
         </div>
@@ -57,7 +57,7 @@
                   <img class="imagem-postagem" src="uploads/<?=$postagem['foto']?>"></img><br>
                 </div>
                 <div class="col-2">
-                  <a class="botao-curtir btn">Curtir</a><br>
+                  <a class="nav-link active text-white mx-1"><i class="bi bi-suit-heart"></i></a></i><br>
                 </div>
               </div>  
           <?php

@@ -1,7 +1,6 @@
 
 
 .rodape {
-    position: fixed;
     bottom: 0;
       left: 0;
       width: 100%;
@@ -61,7 +60,10 @@
 }
 
 .link{
- color: #A7B075;
+ color:aliceblue;
+ background-color: #D3A95B;;
+border-radius: 5px;
+padding: 3px;
 
 }
 
@@ -74,7 +76,7 @@
 }
 
 .botaologin{
-  background-color: #A7B075;
+  background-color: #D3A95B;
   color: rgb(255, 251, 251);
   border-radius: 10px;
   padding: 8px 8px;

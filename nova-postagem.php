@@ -11,6 +11,11 @@
         <?php
             include("reutilizado/navbar.php");
         ?>
+<body  class="d-flex flex-column min-vh-100" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('img/Fundo Nova Postagem.jpg');
+              background-size: cover;
+              background-position: center;
+              background-repeat: no-repeat;">
+
 
         <div class="container my-5">
             <div class="card shadow p-4">
@@ -41,3 +46,4 @@
     <?php
         include("reutilizado/footer.php");
     ?>
+</body>
