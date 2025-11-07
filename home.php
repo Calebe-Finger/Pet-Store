@@ -12,24 +12,11 @@
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
       <link   href="css/estilo.css" rel="stylesheet">
-      <title>Home Page</title>
+      <title>Página Inicial</title>
       <!-- Navbar -->
-     <nav class="navbar navbar-expand-lg " style="background-color: rgba(0,0,0,0.6)">
-    <div class="container">
-        <img src="img\logo_minimalista.jpg" class="logo mx-4">
-        <a class="navbar-brand nav-link text-white" href="index.php">Pet Store</a>   
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link active text-white mx-1" href="home.php"><i class="bi bi-house fs-3"></i></a></li>
-                <li class="nav-item"><a class="nav-link text-white mx-1" href="usuarios.php"><i class="bi bi-person-plus fs-3"></i></a></li>
-                <li class="nav-item"><a class="nav-link text-white mx-1" href="postagens.php"><i class="bi bi-plus-square"></i></i></a></li>
-                <li class="nav-item"><a class="nav-link text-white mx-1" href="logout.php"><i class="bi bi-box-arrow-right fs-3"></i></a></li>
-                <li class="nav-item"><a class="nav-link text-white mx-1" href="perfil.php"><i class="bi bi-person-circle fs-3"></i></a></li>
-
-            </ul>
-        </div>
-    </div>
-</nav>
+        <?php
+            include 'reutilizado\navbar.php'
+        ?>
   </head>
   <body class="fundo-home d-flex flex-column min-vh-100" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('img/Fundo Home.jpg');
               background-size: cover;
